@@ -7,7 +7,7 @@ Backward chaining is a reasoning or inference strategy used in artificial intell
 In a backward chaining algorithm, the process starts with the goal or conclusion that needs to be proven. The algorithm then examines the available rules and facts to find those that support the goal. If a rule's conclusion matches the current goal, the algorithm moves to its premises or antecedents and tries to prove them. This process continues recursively until either the goal is proven or no further rules can be applied.
 
 Input:
-goal, facts, rules, db =["M"], ["A", "B", "C", "D"], [\n
+goal, facts, rules, db =["M"], ["A", "B", "C", "D"], [<br>
 [("P"),"Q"],\n
 [("D","M"),"P"],\n
 [("B","L"),"M"],\n
