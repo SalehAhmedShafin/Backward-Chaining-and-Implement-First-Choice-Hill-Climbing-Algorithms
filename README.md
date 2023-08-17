@@ -14,19 +14,20 @@ goal, facts, rules, db =["M"], ["A", "B", "C", "D"], [
 [("A","B"),"L"],
 [("A","D"),"G"],
 [("G","B"),"C"]], {}
+
 Implementation Steps:
 
-I. Call Backward Chaining recursive function with goals, rules, facts and database
-II. Check if the goal is already in the database,
-if true, then add goal to the result
-III. Check if goal is already in facts,[base condition]
-if true, then add True to the result
+1. Call Backward Chaining recursive function with goals, rules, facts and database
+2. Check if the goal is already in the database,
+    if true, then add goal to the result
+3. Check if goal is already in facts,[base condition]
+    if true, then add True to the result
 
-IV. Iterate through rules, Check if the rule's conclusion is the goal,
-if true, check if all the rule's premises are true by calling the recursive function,
-if all premises are true, add the goal to the database and return True
-V. if no rule is found or no rule's premises are true, add False to the result and
-database
+4. Iterate through rules, Check if the rule's conclusion is the goal,
+    if true, check if all the rule's premises are true by calling the recursive function,
+    if all premises are true, add the goal to the database and return True
+5. if no rule is found or no rule's premises are true, add False to the result and
+    database
 
 First Choice Hill Climbing Algorithm:
 
