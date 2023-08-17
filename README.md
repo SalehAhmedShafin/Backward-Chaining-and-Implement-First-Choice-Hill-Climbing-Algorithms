@@ -43,12 +43,17 @@ ss = [ 2, 3, 4, 5, 6, 5, 7, 8 ]
 Implementation Steps:<br>
 Defined a function called ‘fchc’ which works as follows:<br>
 • Initialize Current State and Current Heuristic Value<br>
+
 • Find Successors of the Current State<br>
+
 • Find Heuristic Value for the Successors<br>
-• If Any Successors heuristic value is lower than current value. Then this state will become<br>
-current state and its heuristic value will become current value. Add this state to database<br>
+
+• If Any Successors heuristic value is lower than current value. Then this state will become current state and its heuristic value will become current value. Add this state to database<br>
 with status = “c”<br>
+
 • Otherwise Add that state to database with status = “s”<br>
+
 • If No Successors with lower heuristic value is found and current value is not zero, then<br>
 generate a random state and restart the process<br>
+
 • Otherwise print the state and return.<br>
