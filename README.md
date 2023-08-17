@@ -6,6 +6,28 @@ Backward chaining is a reasoning or inference strategy used in artificial intell
 
 In a backward chaining algorithm, the process starts with the goal or conclusion that needs to be proven. The algorithm then examines the available rules and facts to find those that support the goal. If a rule's conclusion matches the current goal, the algorithm moves to its premises or antecedents and tries to prove them. This process continues recursively until either the goal is proven or no further rules can be applied.
 
+Input:
+goal, facts, rules, db =["M"], ["A", "B", "C", "D"], [
+[("P"),"Q"],
+[("D","M"),"P"],
+[("B","L"),"M"],
+[("A","B"),"L"],
+[("A","D"),"G"],
+[("G","B"),"C"]], {}
+Implementation Steps:
+
+I. Call Backward Chaining recursive function with goals, rules, facts and database
+II. Check if the goal is already in the database,
+if true, then add goal to the result
+III. Check if goal is already in facts,[base condition]
+if true, then add True to the result
+
+IV. Iterate through rules, Check if the rule's conclusion is the goal,
+if true, check if all the rule's premises are true by calling the recursive function,
+if all premises are true, add the goal to the database and return True
+V. if no rule is found or no rule's premises are true, add False to the result and
+database
+
 First Choice Hill Climbing Algorithm:
 
 Hill climbing is a heuristic optimization algorithm used to find the optimal solution for a given problem by iteratively moving toward better solutions in the solution space. The "hill" metaphor reflects the idea of climbing a hill (maximizing or minimizing a function) to reach the highest point (optimal solution).
