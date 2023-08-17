@@ -8,16 +8,11 @@ In a backward chaining algorithm, the process starts with the goal or conclusion
 
 Input:
 goal, facts, rules, db =["M"], ["A", "B", "C", "D"], [\n
-[("P"),"Q"],
-
-[("D","M"),"P"],
-
-[("B","L"),"M"],
-
-[("A","B"),"L"],
-
-[("A","D"),"G"],
-
+[("P"),"Q"],\n
+[("D","M"),"P"],\n
+[("B","L"),"M"],\n
+[("A","B"),"L"],\n
+[("A","D"),"G"],\n
 [("G","B"),"C"]], {}
 
 Implementation Steps:
